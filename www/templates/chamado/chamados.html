@@ -1,0 +1,21 @@
+<ion-view view-title="Chamados">
+  <ion-nav-buttons side="right">  
+    <div class="buttons">
+      <button class="button button-icon ion-compose" ng-click="modal.show()">Novo
+      </button>
+    </div>  
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chamado in chamados" type="item-text-wrap" href="#/main/chamados/{{chamado.StatusChamado}}">
+        <img ng-src="{{chamado.StatusChamado}}">
+        <h2>{{chamado.DataAbertura}}</h2>
+        <p>{{chamado.Ocorrencia}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        <ion-option-button class="button-assertive" ng-click="remove(chamado.Id)">
+          Excluir
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,19 @@
+<ion-modal-view>
+	<ion-header-bar class="bar bar-header bar-balanced">
+	  <h1 class="title">Novo chamado</h1>
+	  <button class="button button-icon ion-close" ng-click="modal.hide()">Cancelar</button>
+	</ion-header-bar>
+	<ion-content class="padding">
+	  <div class="list">
+	    <label class="item item-input item-select">	     
+		  <textarea rows="8" placeholder="Ocorrência" ng-model="chamado.Ocorrencia"></textarea>
+		  <select>
+		      <option selected></option>
+		      <option>Green</option>
+		      <option>Red</option>
+		  </select>		   
+	    </label>
+	    <button class="button button-full button-positive" ng-click="createContact(newUser)">Criar</button>
+	  </div>
+	</ion-content>
+</ion-modal-view>
